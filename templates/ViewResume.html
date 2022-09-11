@@ -1,0 +1,39 @@
+{% extends './common/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<section class="py-5">
+    <div class="container text-center py-5">
+        <div class="container bg-dark py-5">
+            <div class="row">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h3 class="fw-bold" style="color: var(--bs-green);">Your CV's</h3>
+                </div>
+            </div>
+            {% for i in data %}
+            <div class="py-5 p-lg-5"> 
+                <div class="row row-cols-1 row-cols-md-8 mx-auto" style="max-width: 1200px;" >
+                    <div class="col mb-5">
+                        <div class="card shadow-sm">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <img class="img-fluid" src="{% static 'img/newimg-removebg-preview.png' %}" style="width: 250px;height: 250px;">
+                                <br>
+                                <p class="fw-bold text-center card-title" placeholder="Name"> {{i.name}} </p>
+                                <p class="fw-bold text-center card-title" placeholder="Phone Number">{{i.phoneno}}</p>
+                                <p class="fw-bold text-center card-title" placeholder="Email"> {{i.email}}</p>
+                                <a href="{% url 'delete' i.id %}">
+                                    <button class="btn btn-primary btn-sm" type="button" >Delete</button>
+                                </a>
+                                <a href="{% url 'update' i.id %}">
+                                    <button class="btn btn-primary btn-sm" type="button" >Update</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

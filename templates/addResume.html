@@ -1,0 +1,447 @@
+{% extends './common/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<section class="py-5">
+    <div class="container text-center py-5">
+        <p class="fw-bold text-success mb-2" style="font-size: 1.6rem;">Fill the form!</p><a href="#">
+            <form action="{% url 'addResume' %}" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-4">
+                        <label>Name</label>
+                        {% render_field form.name %}
+                    </div>
+                    <div class="col-4">
+                        <label>Objective</label>
+                        {% render_field form.objective %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Address</label>
+                        {% render_field form.address %}
+                    </div>
+                    <div class="col-4">
+                        <label>Phone No.</label>
+                        {% render_field form.phoneno %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Email</label>
+                        {% render_field form.email %}
+                    </div>
+                    <div class="col-4">
+                        <label>Github</label>
+                        {% render_field form.github %}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Linkedin</label>
+                        {% render_field form.linkedin %}
+                    </div>
+                    <div class="col-4">
+                        <label>University 1</label>
+                        {% render_field form.university1 %}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Degree Name 1</label>
+                        {% render_field form.degree1 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Stream Name 1</label>
+                        {% render_field form.stream1 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Current Year 1</label>
+                        {% render_field form.currentYear1 %}
+                    </div>
+                    <div class="col-4">
+                        <label>University Starting Year 1</label>
+                        {% render_field form.univStartingYear1 %}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>University Passing Year 1</label>
+                        {% render_field form.univPassingYear1 %}
+                    </div>
+                    <div class="col-4">
+                        <label>University Result 1</label>
+                        {% render_field form.univResult1 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>University 2</label>
+                        {% render_field form.university2 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Degree Name 2</label>
+                        {% render_field form.degree2 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Stream Name 2</label>
+                        {% render_field form.stream2 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Current Year 2</label>
+                        {% render_field form.currentYear2 %}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>University Starting Year 2</label>
+                        {% render_field form.univStartingYear2 %}
+                    </div>
+                    <div class="col-4">
+                        <label>University Passing Year 2</label>
+                        {% render_field form.univPassingYear2 %}
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-4">
+                        <label>University Result 2</label>
+                        {% render_field form.univResult2 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Intermediate School</label>
+                        {% render_field form.intermediateSchool %}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Intermediate Subjects</label>
+                        {% render_field form.intermediateSubjects %}
+                    </div>
+                    <div class="col-4">
+                        <label>Intermediate Starting Year</label>
+                        {% render_field form.intermediateStartingYear %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Intermediate Passing Year</label>
+                        {% render_field form.intermediatePassingYear %}
+                    </div>
+                    <div class="col-4">
+                        <label>Intermediate Marks</label>
+                        {% render_field form.intermediateMarks %}
+                    </div>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>High School</label>
+                        {% render_field form.highSchool %}
+                    </div>
+                    <div class="col-4">
+                        <label>High School Subjects</label>
+                        {% render_field form.highSchoolSubjects %}
+                    </div>
+                </div>
+                
+                
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>high School Starting Year</label>
+                        {% render_field form.highSchoolStartingYear %}
+                    </div>
+                    <div class="col-4">
+                        <label>High School Passing Year</label>
+                        {% render_field form.highSchoolPassingYear %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>High School Marks</label>
+                        {% render_field form.highSchoolMarks %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job Title 1</label>
+                        {% render_field form.jobTitle1 %}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Start Date 1</label>
+                        {% render_field form.jobStartDate1 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job End Date 1</label>
+                        {% render_field form.jobEndDate1 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Description 1 </label>
+                        {% render_field form.jobDescription1 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job Title 2</label>
+                        {% render_field form.jobTitle2 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Start Date 2</label>
+                        {% render_field form.jobStartDate2 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job End Date 2</label>
+                        {% render_field form.jobEndDate2 %}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Description 2</label>
+                        {% render_field form.jobDescription2 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job Title 3</label>
+                        {% render_field form.jobTitle3 %}
+                    </div>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Start Date 3</label>
+                        {% render_field form.jobStartDate3 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job End Date 3</label>
+                        {% render_field form.jobEndDate3 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Description 3</label>
+                        {% render_field form.jobDescription3 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job Title 4</label>
+                        {% render_field form.jobTitle4 %}
+                    </div>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Start Date 4</label>
+                        {% render_field form.jobStartDate4 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job End Date 4</label>
+                        {% render_field form.jobEndDate4 %}
+                    </div>
+                </div>
+                
+
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Description 4</label>
+                        {% render_field form.jobDescription4 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job Title 5</label>
+                        {% render_field form.jobTitle5 %}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Start Date 5</label>
+                        {% render_field form.jobStartDate5 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Job End Date 5</label>
+                        {% render_field form.jobEndDate5 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Job Description 5</label>
+                        {% render_field form.jobDescription5 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Title 1</label>
+                        {% render_field form.projectTitle1 %}
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project Start Date 1</label>
+                        {% render_field form.projectStartDate1 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project End Date 1</label>
+                        {% render_field form.projectEndDate1 %}
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project Description 1</label>
+                        {% render_field form.projectDescription1 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Title 2</label>
+                        {% render_field form.projectTitle2 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project EndDate 2</label>
+                        {% render_field form.projectEndDate2 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Description 2</label>
+                        {% render_field form.projectDescription2 %}
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project Title 3</label>
+                        {% render_field form.projectTitle3 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Start Date 3</label>
+                        {% render_field form.projectStartDate3 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project End Date 3</label>
+                        {% render_field form.projectEndDate3 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Description 3</label>
+                        {% render_field form.projectDescription3 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project Title 4</label>
+                        {% render_field form.projectTitle4 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Start Date 4</label>
+                        {% render_field form.projectStartDate4 %}
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project End Date 4</label>
+                        {% render_field form.projectEndDate4 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Description 4</label>
+                        {% render_field form.projectDescription4 %}
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project Title 5</label>
+                        {% render_field form.projectTitle5 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Start Date 5</label>
+                        {% render_field form.projectStartDate5 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project Title 5</label>
+                        {% render_field form.projectTitle5 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Start Date 5</label>
+                        {% render_field form.projectStartDate5 %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Project End Date 5</label>
+                        {% render_field form.projectEndDate5 %}
+                    </div>
+                    <div class="col-4">
+                        <label>Project Description 5</label>
+                        {% render_field form.projectDescription5 %}
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>Skill Detail</label>
+                        {% render_field form.skillDetail %}
+                    </div>
+                    <div class="col-4">
+                        <label>Language Detail</label>
+                        {% render_field form.languageDetail %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Area of Interest</label>
+                        {% render_field form.areaOfInterest %}
+                    </div>
+                    <div class="col-4">
+                        <label>Extra Curricular Detail</label>
+                        {% render_field form.extracurricularDetail %}
+                    </div>
+                </div>
+                <br>
+                <br>
+                <button class="btn btn-info btn-sm" type="submit">Submit</button>
+            </form>
+
+    </div>
+</section>
+{% endblock %}
