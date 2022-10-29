@@ -1,0 +1,76 @@
+
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<section class="py-5">
+    <div class="container  py-5">
+        <div class="row">
+            <div class="col-md-8 border border-dark px-5 ">
+                <div class="row">
+                    {% for i in profiledata %}
+                    <h2 class=" h1 text-left py-3"> {{i.name}}</h2>
+                    <div class="col align-self-end pb-2">
+                        <a href={{i.github}}> Github</a> <br>
+                        <a href={{i.linkedin}}>Linkedin</a>
+                    </div>
+                    <hr class="hl">
+                    <h4 class="py-3 vl px-2">Contact Information</h4>
+                    <div class="col-sm-4">
+                        <p>{{i.address}}</p>
+                        <p>{{i.phoneno}}</p>
+                        <p>{{i.email}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <hr class="hl">
+                <div class="row">
+                    <h4 class="py-3 vl px-2">Skills</h4>
+                    <div class="row">
+                        {% for i in skilldata %}
+                        <p>{{i.skill}}</p>
+                        {% endfor %}
+                    </div>
+                    <hr class="hl">
+                    <h4 class="py-3 vl px-2">Education</h4>
+                    <div class="row">
+                        {% for i in edudata %}
+
+                        <p class="font-weight-bold">{{i.degree}} in {{i.stream}} ------- (
+                            {{i.univStartingYear}} - {{i.univPassingYear}} ) </p>
+                        <p>{{i.university}} </p>
+                        <p>{{i.univResult}} </p>
+
+                        {% endfor %}
+                    </div>
+                </div>
+                <hr class="hl">
+                <div class="row">
+                    <h4 class="py-3 vl px-2">Experience</h4>
+                    <div class="col-sm-8">
+
+                        {% for i in workdata %}
+
+                        <p class="font-weight-bold">{{i.jobTitle}} --- ( {{i.jobStartDate}} -
+                            {{i.jobEndDate}} ) </p>
+                        <p>{{i.jobDescription}} </p>
+
+                        {% endfor %}
+                    </div>
+                    <hr class="hl">
+                    <h4 class="py-3 vl px-2">Projects</h4>
+                    <div class="col-sm-8">
+                        
+                        {% for i in projdata %}
+                        <p class="font-weight-bold">{{i.projectTitle}} --- ( {{i.projectStartDate}}
+                            -
+                            {{i.projectEndDate}} ) </p>
+                        <p>{{i.techStack}} </p>
+                        <p>{{i.projectDescription}} </p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

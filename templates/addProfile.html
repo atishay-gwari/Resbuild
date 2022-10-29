@@ -1,0 +1,63 @@
+{% extends './common/base.html' %}
+{% load static %}
+<!-- {#{% load widget_tweaks %}#} -->
+{% load crispy_forms_tags %}
+{% block content %}
+<!-- {#<section class="mx-auto display-inline py-5">#}
+{#    <div class="container mx-auto py-5">#}
+{#        <p class="fw-bold text-success mb-2" style="font-size: 1.6rem;">Fill the form!</p><a href="#">#}
+{#            <div class="card mx-auto display:flex">#}
+{#                <form action="{% url 'addprofile' %}" method="POST">#}
+{#                    {% csrf_token %}#}
+{#                    <div class="col-4">#}
+{#                        <label>User Name</label>#}
+{#                        {% render_field form.user_name %}#}
+{#                    </div>#}
+{#                    <div class="col-4">#}
+{#                        <label>Name</label>#}
+{#                        {% render_field form.name %}#}
+{#                    </div>#}
+{#                    <div class="col-4">#}
+{#                        <label>Address</label>#}
+{#                        {% render_field form.address %}#}
+{#                    </div>#}
+{#                    <div class="col-4">#}
+{#                        <label>Phone No</label>#}
+{#                        {% render_field form.phoneno %}#}
+{#                    </div>#}
+{#                    <div class="col-4">#}
+{#                        <label>Email</label>#}
+{#                        {% render_field form.email %}#}
+{#                    </div>#}
+{#                    <div class="col-4">#}
+{#                        <label>Github</label>#}
+{#                        {% render_field form.github %}#}
+{#                    </div>#}
+{#                    <div class="col-4">#}
+{#                        <label>Linkedin</label>#}
+{#                        {% render_field form.linkedin %}#}
+{#                    </div>#}
+{##}
+{#                    <button type="submit" class="btn btn-primary">Submit</button>#}
+{##}
+{#                </form>#}
+{#            </div>#}
+{#    </div>#}
+{#</section>#} -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+      <div style="margin-left: 40%;">
+
+      <form action="{% url 'addprofile' %}" method="POST" style="max-width: 400px; " enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
+{% endblock %}

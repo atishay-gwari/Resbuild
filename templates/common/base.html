@@ -17,7 +17,7 @@
         <div class="container">
             <img class="img-fluid" width="177" height="60" style="width: 100px;height: 43px;"
                 src="{% static 'img/Res%20Build-logos_transparent2.png' %}">
-            <a class="navbar-brand d-flex align-items-center" href="/"></a>
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'home'%}"></a>
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
                 <span class="visually-hidden">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,6 @@
                     <li class="nav-item"><a class="nav-link active" href="{% url 'home'%}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'converter' %}">Pdf Converter</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'view' %}">View Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'addResume' %}">Create a Resume</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contactus'%}">Contact Us</a></li>
                     {% endif %}
                 </ul>

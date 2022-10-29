@@ -72,7 +72,9 @@
         </div>
     </div>
 </section>
+
 <section>
+    {% if not user.is_authenticated %}
     <div class="container py-5">
         <div class="mx-auto" style="max-width: 900px;">
             <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
@@ -83,12 +85,33 @@
                             <a href="{% url 'signup' %}">   
                             <button class="btn btn-info btn-sm" type="button" >CREATE ACCOUNT</button>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    {% else %}
+    <div class="container py-5">
+        <div class="mx-auto" style="max-width: 900px;">
+            <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+                <div class="col mb-4">
+                    <div class="card bg-info-light">
+                        <div class="card-body text-center px-4 py-5 px-md-5">
+                            <h5 class="fw-bold card-title mb-3">Too impatient!</h5>
+                            <h6 class="fw-bold card-title mb-3">Click to view your resume!</h6>
+                            <a href="{% url 'view' %}">   
+                            <button class="btn btn-info btn-sm" type="button" >View Resume</button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
 </section>
 <!-- <section class="py-5">
         <div class="container">

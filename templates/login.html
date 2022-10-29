@@ -5,27 +5,28 @@
 <section class="py-5 mt-5">
   <div class="container py-5">
     <div class="row mb-5">
-      <form method="post">
-        {% csrf_token %}
-        <div class="form-group">
-          <label for="exampleInputEmail1">Username</label>
-          <input type="text" class="form-control" name="Name"  placeholder="Username"
-            style="background-color: whitesmoke;">
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" name="password" placeholder="Password"
-            style="background-color: whitesmoke;">
-        </div>
-        <br>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      <div class="container" style="width: 340px;align-content: center">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control" name="Name" placeholder="Username"
+              >
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password"
+              >
+          </div>
+          </br>
+          <div class="form-group">
+            Forgot your password? <a href="{% url 'reset_password' %}">Reset</a>
+          </div>
+          </br>
+            <button type="submit" class="btn btn-primary" style="margin-left: 30%">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>

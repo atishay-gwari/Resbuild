@@ -1,0 +1,54 @@
+{% extends './common/base.html' %}
+{% load static %}
+{#{% load widget_tweaks %}#}
+{% load crispy_forms_tags %}
+{% block content %}
+{#<section class="py-5">#}
+{#    <div class="container text-center py-5">#}
+{#        <p class="fw-bold text-success mb-2" style="font-size: 1.6rem;">Fill the form!</p><a href="#">#}
+{#            <form action="{% url 'addWork' %}" method="POST">#}
+{#                {% csrf_token %}#}
+{#                <div class="col-4">#}
+{#                    <label>User Name</label>#}
+{#                    {% render_field form.user_name %}#}
+{#                </div>#}
+{#                <div class="col-4">#}
+{#                    <label>Job Title</label>#}
+{#                    {% render_field form.jobTitle %}#}
+{#                </div>#}
+{#                <div class="col-4">#}
+{#                    <label>Job Description</label>#}
+{#                    {% render_field form.jobDescription %}#}
+{#                </div>#}
+{#                <div class="col-4">#}
+{#                    <label>Start Date</label>#}
+{#                    {% render_field form.jobStartDate %}#}
+{#                </div>#}
+{#                <div class="col-4">#}
+{#                    <label>End Date</label>#}
+{#                    {% render_field form.jobEndDate %}#}
+{#                </div>#}
+{#                <button type="submit" class="btn btn-primary">Submit</button>#}
+{##}
+{##}
+{#    </div>#}
+{#</section>#}
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+      <div style="margin-left: 40%;">
+
+      <form action="{% url 'addWork' %}" method="POST" style="max-width: 400px; " enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
+
+{% endblock %}
