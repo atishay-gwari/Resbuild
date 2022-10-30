@@ -1,7 +1,8 @@
 {% extends './common/base.html' %}
 {% load static %}
-
+{% load socialaccount %}
 {% block content %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
 <section class="py-5 mt-5">
   <div class="container py-5">
     <div class="row mb-5">
@@ -23,6 +24,15 @@
           <div class="form-group">
             Forgot your password? <a href="{% url 'reset_password' %}">Reset</a>
           </div>
+          <a href="{% provider_login_url "google" %}"> Log in using:
+
+            <button type="button" class="btn btn-link btn-floating mx-1"style="font-size:20px;color:navy">
+        
+                <i class="fab fa-google"></i>
+
+              </button>
+         
+             </a>
           </br>
             <button type="submit" class="btn btn-primary" style="margin-left: 30%">Submit</button>
         </form>
