@@ -8,19 +8,29 @@ pipeline {
 
     {
 
-          stage('LS') 
+        stage('Hello') 
 
-           {
+        {
+
+            steps 
+            {
+                echo "Hi"
+            }
 
             steps 
 
             {
 
-                bat 'docker-compose up --build'
+                bat 'docker-compose up --build -d'
 
             }
 
-          }
+        }
+
+        
+
+       
+
 
     }
 
