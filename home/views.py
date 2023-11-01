@@ -1,4 +1,3 @@
-from cgitb import text
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from .forms import EducationForm, ProfileForm, ProjectForm, SkillForm, WorkexpForm
