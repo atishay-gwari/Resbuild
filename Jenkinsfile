@@ -16,7 +16,16 @@ pipeline {
             {
                 echo "Hi"
             }
+ 
 
+
+        }
+    
+        stage('Docker') 
+
+        {
+
+            
             steps 
 
             {
@@ -24,13 +33,26 @@ pipeline {
                 bat 'docker-compose up --build -d'
 
             }
+            
+
+        }
+        stage('Sike') 
+
+        {
+
+
+            steps 
+
+            {
+
+                bat 'dir'
+
+            }
+            
 
         }
 
-        
-
-       
-
+    
 
     }
 
