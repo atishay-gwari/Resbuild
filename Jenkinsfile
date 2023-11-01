@@ -78,7 +78,7 @@ pipeline {
 
             {
 
-                sh 'ls'
+                bat 'ls'
 
             }
 
