@@ -13,7 +13,6 @@ pipeline {
             steps {
                 script {
                     // Execute the Docker Compose build and run commands
-                    sh 'docker-compose down -v'
                     sh 'docker-compose up --build -d'
                 }
             }
