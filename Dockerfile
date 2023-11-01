@@ -10,7 +10,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
 RUN echo "python manage.py makemigrations" >> start.sh
 RUN echo "python manage.py migrate" >> start.sh
