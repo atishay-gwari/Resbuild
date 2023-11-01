@@ -12,5 +12,11 @@ COPY . .
 
 EXPOSE 8080
 
+RUN echo "python manage.py makemigrations" >> start.sh
+RUN echo "python manage.py migrate" >> start.sh
+RUN echo "python manage.py collectstatic --noinput" >> start.sh
+RUN echo "python manage.py runserver 0.0.0.0:8080" >> start.sh
+RUN chmod +x start.sh
 
-CMD [ "python","manage.py", "runserver","0.0.0.0:8080" ]
+# Set the shell script as the final CMD to execute
+CMD [ "./start.sh" ]
