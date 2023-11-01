@@ -7,68 +7,43 @@ pipeline {
     stages 
 
     {
-
-        stage('Hello') 
-
-        {
-
-            steps 
-
-            {
-
-                echo 'Hello World'
-
-            }
-
-        }
-
-        
-
-        stage('build') 
+        stage('Github') 
 
         {
 
             steps 
 
             {
-
-                echo 'build'
+                
+                sh "git clone https://github.com/atishay-gwari/Resbuild.git"
 
             }
 
         }
 
-        
 
-       stage('test') 
 
-       {
+
+        stage('Docker') 
+
+        {
 
             steps 
 
             {
-
-                echo 'test..'
+                
+                sh "docker-compose up --build"
 
             }
 
         }
+
+
+     
 
  
 
-        stage('deploy') 
-
-           {
-
-            steps 
-
-            {
-
-                echo 'deploy..'
-
-            }
-
-          }
+        
 
     }
 
