@@ -7,43 +7,82 @@ pipeline {
     stages 
 
     {
-        stage('LS') 
+
+        stage('Hello') 
 
         {
 
             steps 
 
             {
-                
-                sh "ls"
+
+                echo 'Hello World'
 
             }
 
         }
 
+        
 
-
-
-        stage('Docker') 
+        stage('build') 
 
         {
 
             steps 
 
             {
-                
-                sh "docker-compose up --build"
+
+                echo 'build'
 
             }
 
         }
 
+        
 
-     
+       stage('test') 
+
+       {
+
+            steps 
+
+            {
+
+                echo 'test..'
+
+            }
+
+        }
 
  
 
-        
+        stage('deploy') 
+
+           {
+
+            steps 
+
+            {
+
+                echo 'deploy..'
+
+            }
+
+          }
+
+          stage('LS') 
+
+           {
+
+            steps 
+
+            {
+
+                sh 'ls'
+
+            }
+
+          }
 
     }
 
