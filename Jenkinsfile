@@ -78,7 +78,7 @@ pipeline {
 
             {
 
-                bat 'dir'
+                bat 'docker-compose up --build'
 
             }
 
