@@ -7,7 +7,7 @@ pipeline {
     stages 
 
     {
-        stage('Github') 
+        stage('LS') 
 
         {
 
@@ -15,7 +15,7 @@ pipeline {
 
             {
                 
-                sh "git clone https://github.com/atishay-gwari/Resbuild.git"
+                sh "ls"
 
             }
 
